@@ -161,6 +161,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginStart="8dp"
+                android:src="@drawable/shape"
                 android:background="@drawable/shape"
                 android:onClick="onAddPlaceButtonClicked"
                 android:textAppearance="@style/TextAppearance.AppCompat.Button"
