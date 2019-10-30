@@ -51,36 +51,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@color/colorbackground"
+            android:background="@color/colorTopBackground"
             android:orientation="horizontal">
 
-            <!--<ImageView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:paddingBottom="4dp"-->
-                <!--android:paddingRight="8dp"-->
-                <!--android:paddingTop="4dp"-->
-                <!--android:src="@drawable/ic_map_black_24dp"-->
-                <!--tools:ignore="ContentDescription" />-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="4dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:src="@drawable/ic_map_black_24dp"
+                tools:ignore="ContentDescription" />
 
             <Switch
                 android:id="@+id/enable_switch"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:gravity="center"
+                android:gravity="left|center"
                 android:text="@string/enable_geofences"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                android:textColor="@android:color/black"
-                android:textStyle="bold|italic" />
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/LocPermission"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorbackground"
+            android:background="@color/colorBackground"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -121,7 +121,7 @@
             android:id="@+id/Ring"
             android:layout_width="match_parent"
             android:layout_height="32dp"
-            android:background="@color/colorbackground"
+            android:background="@color/colorBackground"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -207,6 +207,7 @@
                 android:layout_height="0dp"
                 android:layout_marginTop="52dp"
                 android:background="@color/colorWhite"
+                android:longClickable="false"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
