@@ -9,13 +9,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_gravity="center"
         android:addStatesFromChildren="false"
-        android:orientation="vertical"
         android:background="@color/colorWhite"
-        android:layout_gravity="center">
+        android:orientation="vertical">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -28,6 +27,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
+                android:fontFamily="monospace"
                 android:gravity="center_horizontal"
                 android:text="@string/settings_label"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -50,34 +50,39 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/colorWhite"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:background="@color/colorbackground"
+            android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="4dp"
-                android:paddingRight="8dp"
-                android:paddingTop="4dp"
-                android:src="@drawable/ic_globe_primary_24dp"
-                tools:ignore="ContentDescription" />
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:paddingBottom="4dp"-->
+                <!--android:paddingRight="8dp"-->
+                <!--android:paddingTop="4dp"-->
+                <!--android:src="@drawable/ic_map_black_24dp"-->
+                <!--tools:ignore="ContentDescription" />-->
 
             <Switch
                 android:id="@+id/enable_switch"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:gravity="center"
                 android:text="@string/enable_geofences"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@android:color/black"
+                android:textStyle="bold|italic" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/LocPermission"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/colorWhite">
+            android:background="@color/colorbackground"
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -91,9 +96,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:gravity="center"
                 android:text="@string/location_permissions"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@android:color/black" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@android:color/black"
+                android:textStyle="bold|italic" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -113,10 +120,10 @@
         <LinearLayout
             android:id="@+id/Ring"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:background="@color/colorWhite">
+            android:layout_height="32dp"
+            android:background="@color/colorbackground"
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -130,9 +137,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:gravity="center"
                 android:text="@string/ringer_permissions"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@android:color/black" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@android:color/black"
+                android:textStyle="bold|italic" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -151,84 +160,72 @@
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="127dp">
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:fontFamily="monospace"
+                android:text="@string/add_new_location"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintBottom_toTopOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.727" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_marginEnd="16dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginRight="16dp"
                 android:layout_marginStart="8dp"
-                android:src="@drawable/shape"
+                android:layout_marginTop="88dp"
                 android:background="@drawable/shape"
                 android:onClick="onAddPlaceButtonClicked"
+                android:text="+"
                 android:textAppearance="@style/TextAppearance.AppCompat.Button"
                 android:textColor="@android:color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.522"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteY="5dp" />
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="@+id/places_list_recycler_view"
+                app:layout_constraintEnd_toEndOf="@+id/places_list_recycler_view"
+                app:layout_constraintHorizontal_bias="0.904"
+                app:layout_constraintStart_toStartOf="@+id/places_list_recycler_view"
+                app:layout_constraintTop_toTopOf="@+id/places_list_recycler_view"
+                app:layout_constraintVertical_bias="0.872"
+                tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="87dp"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/places_list_recycler_view"
+                android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:text="@string/location_list"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="52dp"
+                android:background="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button2" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
 
             <View
+                android:id="@+id/view"
                 android:layout_width="fill_parent"
-                android:layout_height="4dp"
+                android:layout_height="5dp"
                 android:background="@color/colorPrimary"
-                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintBottom_toTopOf="@+id/places_list_recycler_view"
                 tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="0dp" />
+                tools:layout_editor_absoluteX="16dp" />
+
         </android.support.constraint.ConstraintLayout>
 
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/places_list_recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorWhite" />
-
     </LinearLayout>
-
-
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:orientation="vertical">-->
-
-        <!--<ImageView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:padding="4dp"-->
-            <!--android:src="@drawable/powered_by_google_light" />-->
-
-        <!--<TextView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:autoLink="web"-->
-            <!--android:paddingBottom="4dp"-->
-            <!--android:text="@string/privacy"-->
-            <!--android:textAlignment="center" />-->
-    <!--</LinearLayout>-->
 
 </RelativeLayout>
