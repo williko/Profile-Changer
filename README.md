@@ -4,17 +4,19 @@ This apps helps to get phone in to silent mode automatically whenever user gets 
 
 Deployment Steps:
 
-STEPS: 	1.Clone the Project from github 
+STEPS: 
 
-	2.Open the project using Android Studio 
+1.Clone the Project from github 
 
-	2.Build the project 
+2.Open the project using Android Studio 
 
-	3.Run the project using emulator or using Android Mobile phone
+2.Build the project 
+
+3.Run the project using emulator or using Android Mobile phone
 
 Details-
 
-*I have used databace is SQ Lite*
+*I have used databace for SQ Lite*
 
 **App is compatible in android version 8.0+ .**
 
